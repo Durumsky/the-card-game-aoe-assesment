@@ -15,8 +15,7 @@ const PlayerOverview = ({ playersData, selectorHandler, selectedPlayer }) => {
       <PlayerOverviewContainer>
         <PlayerOverviewH1>Overview</PlayerOverviewH1>
         <PlayerOverviewWrapper>
-          {playersData.map((player, i) => {
-            return (
+          {playersData.map((player, i) => (
               <Card
                 player={player}
                 selectorHandler={selectorHandler}
@@ -24,8 +23,7 @@ const PlayerOverview = ({ playersData, selectorHandler, selectedPlayer }) => {
                 key={i}
                 active={activeCard === i && true}
               />
-            );
-          })}
+            ))}
         </PlayerOverviewWrapper>
       </PlayerOverviewContainer>
     </>

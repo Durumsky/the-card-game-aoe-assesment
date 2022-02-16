@@ -7,12 +7,10 @@ const Card = ({player, selectorHandler, active}) => {
     selectorHandler(realName, playerName, asset, img)
   }
 
-  console.log(active)
-
       
 
   return (
-    <>
+    
       <PlayerOverviewCard
         onClick={() =>
           clickHandler(
@@ -32,7 +30,6 @@ const Card = ({player, selectorHandler, active}) => {
         </PlayerOverviewP>
         <PlayerOverviewP>{player.asset.substring(0, 5)}...</PlayerOverviewP>
       </PlayerOverviewCard>
-    </>
   );
 };
 
