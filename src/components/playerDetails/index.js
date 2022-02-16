@@ -1,25 +1,38 @@
-import React from 'react'
-import { DetailsContainer, DetailsWrapper, Column1, Column2, DetailsH1, DetailsH4, DetailsP, DetailsImg } from './DetailElements'
+import React from "react";
+import {
+  DetailsContainer,
+  DetailsWrapper,
+  Column1,
+  Column2,
+  DetailsH1,
+  DetailsH4,
+  DetailsP,
+  DetailsImg,
+} from "./DetailElements";
 
-const PlayerDetails = () => {
+const PlayerDetails = (props) => {
+
   return (
     <DetailsContainer>
-        <DetailsWrapper>
-          <Column1>
+      <DetailsWrapper>
+        <Column1>
             <DetailsH1>Details</DetailsH1>
             <DetailsH4>Real Name</DetailsH4>
-            <DetailsP>Real Name</DetailsP>
+            <DetailsP>{props.selectedPlayer.realName}</DetailsP>
             <DetailsH4>Player Name</DetailsH4>
-            <DetailsP>Player Name</DetailsP>
+            <DetailsP>{props.selectedPlayer.playerName}</DetailsP>
             <DetailsH4>Asset</DetailsH4>
-            <DetailsP>Asset</DetailsP>
+            <DetailsP>{props.selectedPlayer.asset}</DetailsP>
           </Column1>
           <Column2>
-            <DetailsImg></DetailsImg>
+          {props.selectedPlayer.selected &&
+          <DetailsImg src={props.selectedPlayer.img}/>
+          }
+            
           </Column2>
-        </DetailsWrapper>
+      </DetailsWrapper>
     </DetailsContainer>
-  )
-}
+  );
+};
 
-export default PlayerDetails
+export default PlayerDetails;

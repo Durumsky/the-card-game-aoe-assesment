@@ -6,6 +6,13 @@ import Overview from '../components/playerOverview'
 
 const Home = () => {
     const [playersData, setPlayersData] = useState([])
+    const [selectedPlayer, setSelectedPlayer] = useState({
+      selected: false,
+      realName: '',
+      playerName: '',
+      asset: '',
+      img: ''
+    })
 
     function getData() {
     fetch('playersData.json')
@@ -20,6 +27,16 @@ const Home = () => {
         getData()
     }, [])
 
+    const selectorHandler = (realName, playerName, asset, img) => {
+      setSelectedPlayer({
+        selected: true,
+        realName: realName,
+        playerName: playerName,
+        asset: asset,
+        img: img,
+      })
+    }
+
     
 
   return (
@@ -27,13 +44,13 @@ const Home = () => {
     <HomeContainer>
       <HomeWrapper>
         <Column1>
-          < PlayerDetails />
+          < PlayerDetails selectedPlayer={selectedPlayer} />
         </Column1>
         <Column2>
           < Controls />
         </Column2>
       </HomeWrapper>
-          < Overview /> 
+          < Overview playersData={playersData} selectedPlayer={selectedPlayer} selectorHandler={selectorHandler}/> 
     </HomeContainer>
    
       

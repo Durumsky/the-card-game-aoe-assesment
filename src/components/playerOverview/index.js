@@ -1,57 +1,31 @@
-import React from "react";
-import {PlayerOverviewContainer, PlayerOverviewWrapper, PlayerOverviewCard, PlayerOverviewP, PlayerOverviewH1} from './OverviewElements'
+import React, { useState } from "react";
+import {
+  PlayerOverviewContainer,
+  PlayerOverviewWrapper,
+  PlayerOverviewH1,
+} from "./OverviewElements";
+import Card from "./Card";
 
-const PlayerOverview = () => {
+const PlayerOverview = ({ playersData, selectorHandler, selectedPlayer }) => {
+  const [activeCard, setActiveCard] = useState();
+  console.log(activeCard)
+
   return (
     <>
       <PlayerOverviewContainer>
         <PlayerOverviewH1>Overview</PlayerOverviewH1>
         <PlayerOverviewWrapper>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
-          <PlayerOverviewCard>
-            <PlayerOverviewP>RealName</PlayerOverviewP>
-            <PlayerOverviewP>PlayerName</PlayerOverviewP>
-            <PlayerOverviewP>Asset</PlayerOverviewP>
-          </PlayerOverviewCard>
+          {playersData.map((player, i) => {
+            return (
+              <Card
+                player={player}
+                selectorHandler={selectorHandler}
+                onClick={() => setActiveCard(i)}
+                key={i}
+                active={activeCard === i && true}
+              />
+            );
+          })}
         </PlayerOverviewWrapper>
       </PlayerOverviewContainer>
     </>
