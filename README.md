@@ -22,6 +22,22 @@ The app is designed to be fully responsive to any kind of screens.
 
 ![View on a phone](./src/screenshots/mobile-view-2.png)
 
+The app contains the following:
+
+- Basic modular folder structure:
+
+ ├── mockedBackend              # Fake Backend created with json-server
+ ├── src   
+    ├── Components              # React components
+    │   ├── controls              
+    │   ├── playerDetails              
+    │   ├── PlayerOverview                    
+    │                   
+    └── page                    # React single page
+
+- Asynchronously load of the player data in json format, using promises (axios) and useEffect.
+ 
+
 ### How to launch it:
 
 1. Clone this repository
