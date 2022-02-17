@@ -26,14 +26,14 @@ The app contains the following:
 
 - Basic modular folder structure:
 
- ├── mockedBackend              # Fake Backend created with json-server
- ├── src   
-    ├── Components              # React components
-    │   ├── controls              
-    │   ├── playerDetails              
-    │   ├── PlayerOverview                    
+    ├── mockedBackend              
+    ├── src   
+    │    ├── Components             
+    │       ├── controls              
+    │       ├── playerDetails              
+    │       ├── PlayerOverview                    
     │                   
-    └── page                    # React single page
+    └── page                   
 
 - Asynchronously load of the player data in json format, using promises (axios) and useEffect.
  
