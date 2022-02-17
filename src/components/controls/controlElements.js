@@ -30,6 +30,7 @@ export const ControlsButton = styled.button`
 
   &:hover {
    background: #3465A4;
+   color: white;
   }
 `;
 export const ControlsSubmitButton = styled.button`
@@ -43,5 +44,6 @@ export const ControlsSubmitButton = styled.button`
 
   &:hover {
    background: #3465A4;
+   color: white;
   }
 `;

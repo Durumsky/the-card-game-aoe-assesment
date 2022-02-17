@@ -6,16 +6,16 @@ import {
   ControlsSubmitButton
 } from "./controlElements";
 
-const Controls = () => {
+const Controls = ({sortDesc, sortAsc, submit}) => {
   return (
     <>
       <ControlsContainer>
         <ControlsWrapper>
-          <ControlsButton>SORT ASC</ControlsButton>
-          <ControlsButton>SORT DESC</ControlsButton>
+          <ControlsButton onClick={()=> sortAsc()}>SORT ASC</ControlsButton>
+          <ControlsButton onClick={()=> sortDesc()}>SORT DESC</ControlsButton>
         </ControlsWrapper>
         <ControlsWrapper>
-          <ControlsSubmitButton>Submit</ControlsSubmitButton>
+          <ControlsSubmitButton onClick={()=> submit()}>Submit</ControlsSubmitButton>
         </ControlsWrapper>
       </ControlsContainer>
     </>
