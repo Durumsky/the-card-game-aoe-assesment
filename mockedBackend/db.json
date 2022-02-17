@@ -45,6 +45,13 @@
     }
   ],
   "submitedPlayers": [
-    
+    {
+      "selected": true,
+      "realName": "Darcy Candice Ball",
+      "playerName": "Crystaldash",
+      "asset": "Secret Glowquake Gold",
+      "img": "https://avatarfiles.alphacoders.com/125/thumb-125171.png",
+      "id": 1
+    }
   ]
 }
