@@ -29,9 +29,9 @@ The app contains the following:
     ├── mockedBackend              
     ├── src   
     │    ├── Components             
-    │       ├── controls              
-    │       ├── playerDetails              
-    │       ├── PlayerOverview                    
+    │           ├── controls              
+    │           ├── playerDetails              
+    │           ├──PlayerOverview                    
     │                   
     └── page                   
 
