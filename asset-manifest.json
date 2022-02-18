@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/the-card-game-aoe-assesment/static/css/main.ace9898c.css",
+    "main.js": "/the-card-game-aoe-assesment/static/js/main.a34e7e5e.js",
+    "index.html": "/the-card-game-aoe-assesment/index.html",
+    "main.ace9898c.css.map": "/the-card-game-aoe-assesment/static/css/main.ace9898c.css.map",
+    "main.a34e7e5e.js.map": "/the-card-game-aoe-assesment/static/js/main.a34e7e5e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ace9898c.css",
+    "static/js/main.a34e7e5e.js"
+  ]
+}
